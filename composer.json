@@ -3,7 +3,7 @@
   "require": {
     "php": ">=5.6",
     "packaged/thrift": "0.9.2.1",
-    "zanphp/nova-client": "dev-master",
+    "zanphp/nova-client": "dev-laogui",
     "zanphp/contracts": "dev-master",
     "zanphp/nova-connection-pool": "dev-master"
   },
