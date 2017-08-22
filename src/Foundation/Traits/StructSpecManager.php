@@ -35,6 +35,27 @@ trait StructSpecManager
         return $arr;
     }
 
+    /**
+     * 移除null
+     * @return array
+     */
+    public function getData()
+    {
+        $structSpec = $this->getStructSpec();
+        $arr = [];
+        foreach ($structSpec as $struct) {
+            $keyName = $struct['var'];
+            if (empty($struct['required'])) {
+                if ($this->$keyName !== null) {
+                    $arr[$keyName] = $this->$keyName;
+                }
+            } else {
+                $arr[$keyName] = $this->$keyName;
+            }
+        }
+        return $arr;
+    }
+
     public function toDb( array $dbMap,array $filter = []){
         $structMap = $this->toArray();
 
