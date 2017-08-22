@@ -59,6 +59,25 @@ trait StructSpecManager
         return $this;
     }
 
+    public static function fillData(array $data){
+        $self = new static();
+        foreach($data as $structField => $value){
+            if(property_exists($self,$structField) ){
+                $self->$structField = $value;
+            }
+        }
+        return $self;
+    }
+
+    public static function fillMap(array $datas){
+        $result = [];
+        foreach ($datas as $data){
+            $result[] = self::fillData($data);
+        }
+        return $result;
+    }
+
+
     /**
      * for php-ext:thrift-protocol
      */
