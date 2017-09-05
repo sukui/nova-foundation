@@ -9,7 +9,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Kdt\\Iron\\Nova\\": "src"
+      "ZanPHP\\NovaFoundation\\": "src"
     }
   },
   "extra": {
