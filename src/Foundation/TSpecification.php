@@ -1,8 +1,8 @@
 <?php
 
-namespace Kdt\Iron\Nova\Foundation;
+namespace ZanPHP\NovaFoundation\Foundation;
 
-use Kdt\Iron\Nova\Foundation\Traits\ServiceSpecManager;
+use ZanPHP\NovaFoundation\Foundation\Traits\ServiceSpecManager;
 
 abstract class TSpecification
 {

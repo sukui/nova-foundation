@@ -1,14 +1,13 @@
 <?php
 
-namespace Kdt\Iron\Nova\Foundation;
-
-use Kdt\Iron\Nova\Foundation\Traits\InstanceManager;
+namespace ZanPHP\NovaFoundation\Foundation;
 
 use ZanPHP\Contracts\ConnectionPool\Connection;
 use ZanPHP\Exception\ZanException;
 use ZanPHP\NovaClient\NovaClient;
 use ZanPHP\NovaConnectionPool\Exception\NoFreeConnectionException;
 use ZanPHP\NovaConnectionPool\NovaClientConnectionManager;
+use ZanPHP\NovaFoundation\Foundation\Traits\InstanceManager;
 
 abstract class TService
 {

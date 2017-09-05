@@ -1,6 +1,6 @@
 <?php
 
-namespace Kdt\Iron\Nova\NullResult;
+namespace ZanPHP\NovaFoundation\NullResult;
 
 
 class NovaEmptySetResult extends BaseNullResult 

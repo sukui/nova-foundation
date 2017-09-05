@@ -1,10 +1,10 @@
 <?php
 
-namespace Kdt\Iron\Nova\Foundation\Traits;
+namespace ZanPHP\NovaFoundation\Foundation\Traits;
 
-use Kdt\Iron\Nova\NullResult\NovaEmptyListResult;
-use Kdt\Iron\Nova\NullResult\NovaNullResult;
 use Thrift\Type\TType;
+use ZanPHP\NovaFoundation\NullResult\NovaEmptyListResult;
+use ZanPHP\NovaFoundation\NullResult\NovaNullResult;
 
 trait ServiceSpecManager
 {
