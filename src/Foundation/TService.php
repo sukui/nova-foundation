@@ -103,7 +103,7 @@ abstract class TService
     /**
      * @return TSpecification
      */
-    final private function getRelatedSpec()
+    final public function getRelatedSpec()
     {
         if (is_null($this->relatedSpec))
         {
