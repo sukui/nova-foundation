@@ -83,6 +83,14 @@ abstract class TService
             throw new NoFreeConnectionException("get nova connection error");
         }
 
+        //自动补充丢失的默认值
+        $ref = new \ReflectionMethod($this,$method);
+        foreach ($ref->getParameters() as $key => $param) {
+            if(!isset($func_get_args[ $key ])&&$param->isDefaultValueAvailable()){
+                $arguments[$key] = $param->getDefaultValue();
+            }
+        }
+
         // 历史原因 此处依赖NovaClient, 产生循环依赖
         $client = NovaClient::getInstance($connection, $serviceName);
         $timeout = $this->timeout;
