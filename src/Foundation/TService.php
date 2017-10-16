@@ -86,7 +86,7 @@ abstract class TService
         //自动补充丢失的默认值
         $ref = new \ReflectionMethod($this,$method);
         foreach ($ref->getParameters() as $key => $param) {
-            if(!isset($func_get_args[ $key ])&&$param->isDefaultValueAvailable()){
+            if(!isset($arguments[ $key ])&&$param->isDefaultValueAvailable()){
                 $arguments[$key] = $param->getDefaultValue();
             }
         }
